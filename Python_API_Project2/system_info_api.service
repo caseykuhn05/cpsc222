@@ -1,0 +1,25 @@
+#[Unit] 
+#Description=Local System Info API (users/groups) 
+
+#[Service] 
+#Type=simple 
+#User=user
+#WorkingDirectory=/home/user/cpsc222/cpsc222/Python_API_Project2
+#ExecStart=/usr/bin/python3 /home/user/cpsc222/cpsc222/Python_API_Project2/python_api.py
+#Restart=always 
+
+#[Install] 
+#WantedBy=default.target
+[Unit]
+Description=Local System Info API (users/groups)
+After=network.target
+
+[Service]
+Type=simple
+User=user
+WorkingDirectory=/home/user/cpsc222/cpsc222/Python_API_Project2
+ExecStart=/usr/bin/python3 /home/user/cpsc222/cpsc222/Python_API_Project2/python_api.py
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
